@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
@@ -7,6 +8,8 @@ class HomeController extends GetxController {
   var roomsNum = 1.obs;
   var adultNums = 1.obs;
   var chieldrensNum = 1.obs;
+
+  //* increment//
   void increment(String type) {
     if (type == rooms) {
       roomsNum += 1;
@@ -18,6 +21,7 @@ class HomeController extends GetxController {
     update();
   }
 
+  //* decrement//
   void decrement(String type) {
     if (type == rooms) {
       roomsNum -= 1;
@@ -28,4 +32,7 @@ class HomeController extends GetxController {
     }
     update();
   }
+
+  //* switch controller//
+  final switchController = ValueNotifier<bool>(false);
 }

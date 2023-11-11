@@ -288,11 +288,15 @@ class SheetButtonBody extends StatelessWidget {
                           ],
                         ),
                         //*switch botton//
-                        AdvancedSwitch(width: 60.w, height: 35.h)
+                        AdvancedSwitch(
+                          controller: controller.switchController,
+                          width: 60.w,
+                          height: 35.h,
+                        )
                       ],
                     ),
                   ),
-                  SizedBox(height: 180.h),
+                  SizedBox(height: 150.h),
                   //* apply button//
                   CustomButton(
                     onPressed: () {},
